@@ -1,5 +1,5 @@
 # LiteNet2-ExemploIntegracao
-Aplicação C# ConsoleApp de exemplo de integração
+Aplicação C# ConsoleApp de exemplo de integração com a placa LiteNet2
 
-Software Toletus LiteNet2 Manager:
+Software Gerenciador Toletus LiteNet2:
 https://downloads.toletus.com/toletusgerenciador2
