@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="4.7.10" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Toletus.SM25.Base\Toletus.SM25.Base.csproj" />
+    <ProjectReference Include="..\Toletus.SM25.Command\Toletus.SM25.Command.csproj" />
+  </ItemGroup>
+
+</Project>

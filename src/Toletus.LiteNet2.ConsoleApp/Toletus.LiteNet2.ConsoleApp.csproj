@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{76545655-3752-49EA-88BC-2BF984F05383}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Toletus.LiteNet2.ConsoleApp</RootNamespace>
+    <AssemblyName>Toletus.LiteNet2.ConsoleApp</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FingerprintReader\FingerprintReaderMenu.cs" />
+    <Compile Include="FingerprintReader\SendCommandExtensions.cs" />
+    <Compile Include="LiteNet\LiteNetSearchMenu.cs" />
+    <Compile Include="LiteNet\GetMenu.cs" />
+    <Compile Include="LiteNet\LiteNetSetFlowControlExtendedMenu.cs" />
+    <Compile Include="LiteNet\LiteNetSetFlowControlMenu.cs" />
+    <Compile Include="LiteNet\LiteNetSetBoolMenu.cs" />
+    <Compile Include="LiteNet\LiteNetSetMessageMenu.cs" />
+    <Compile Include="MainMenu.cs" />
+    <Compile Include="LiteNet\ReleaseMenu.cs" />
+    <Compile Include="LiteNet\LiteNetSetEntryClockwiseMenu.cs" />
+    <Compile Include="LiteNet\LiteNetSetPasswordMenu.cs" />
+    <Compile Include="LiteNet\SetMenu.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="docs\CAMABIO SM25 User Manual.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Toletus.Extensions\Toletus.Extensions.csproj">
+      <Project>{08e4c3cb-6134-41fb-9d1d-44aa38ea4368}</Project>
+      <Name>Toletus.Extensions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toletus.LiteNet2.Base\Toletus.LiteNet2.Base.csproj">
+      <Project>{db4a8f5c-9c17-4610-9dbc-b8a5e7217470}</Project>
+      <Name>Toletus.LiteNet2.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toletus.LiteNet2.Command\Toletus.LiteNet2.Command.csproj">
+      <Project>{dd27fb87-9705-45e3-8e50-299fe89d684a}</Project>
+      <Name>Toletus.LiteNet2.Command</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Toletus.SM25.Command\Toletus.SM25.Command.csproj">
+      <Project>{36c6ea2f-24da-424c-82cf-1cc54b5a3a6f}</Project>
+      <Name>Toletus.SM25.Command</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Humanizer">
+      <Version>2.11.10</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
